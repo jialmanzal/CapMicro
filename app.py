@@ -10,7 +10,7 @@ api = Api(app)
 config = ConfigParser()
 config.read('config.properties')
 
-app.config['CONFIGURACION_MONGO'] = {
+app.config['MONGODB_SETTINGS'] = {
     'host': config.get(section='database_config', option='host')
     + config.get(section='database_config', option='database')
 }
